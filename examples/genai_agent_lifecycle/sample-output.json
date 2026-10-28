@@ -1,0 +1,146 @@
+[
+  {
+    "scenario": "same-worker",
+    "workflow_id": "expense-same-worker",
+    "run_id": "01a182ab-3454-75df-952f-0d17e3c23ee8",
+    "result": "submitted 250",
+    "history": [
+      "1:EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
+      "2:EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "3:EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "4:EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "5:EVENT_TYPE_WORKFLOW_EXECUTION_SIGNALED",
+      "6:EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "7:EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "8:EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "9:EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "10:EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "11:EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "12:EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "13:EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "14:EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "15:EVENT_TYPE_WORKFLOW_EXECUTION_COMPLETED"
+    ],
+    "spans": [
+      {
+        "name": "request expense",
+        "trace_id": "57c35c8c9594bbf4e4af60f1aa46fd06",
+        "span_id": "2b0bf406c36dc510",
+        "parent_span_id": null
+      },
+      {
+        "name": "approve expense",
+        "trace_id": "ca80dd6b82f692ed6f43e8e21abfcbbc",
+        "span_id": "40587503dbff6f82",
+        "parent_span_id": null
+      }
+    ],
+    "logs": [
+      {
+        "event_name": "gen_ai.agent.paused",
+        "trace_id": "57c35c8c9594bbf4e4af60f1aa46fd06",
+        "span_id": "2b0bf406c36dc510",
+        "attributes": {
+          "gen_ai.agent.execution.id": "01a182ab-3454-75df-952f-0d17e3c23ee8",
+          "gen_ai.agent.name": "ExpenseApproval",
+          "gen_ai.agent.pause.id": "5aef3ade-62c8-472e-b337-66cb27c4a2b7",
+          "gen_ai.agent.pause.reason": "human_input"
+        }
+      },
+      {
+        "event_name": "gen_ai.agent.checkpointed",
+        "trace_id": "57c35c8c9594bbf4e4af60f1aa46fd06",
+        "span_id": "2b0bf406c36dc510",
+        "attributes": {
+          "gen_ai.agent.execution.id": "01a182ab-3454-75df-952f-0d17e3c23ee8",
+          "gen_ai.agent.name": "ExpenseApproval",
+          "gen_ai.agent.checkpoint.id": "01a182ab-3454-75df-952f-0d17e3c23ee8:3",
+          "gen_ai.agent.pause.id": "5aef3ade-62c8-472e-b337-66cb27c4a2b7"
+        }
+      },
+      {
+        "event_name": "gen_ai.agent.resumed",
+        "trace_id": "57c35c8c9594bbf4e4af60f1aa46fd06",
+        "span_id": "2b0bf406c36dc510",
+        "attributes": {
+          "gen_ai.agent.execution.id": "01a182ab-3454-75df-952f-0d17e3c23ee8",
+          "gen_ai.agent.name": "ExpenseApproval",
+          "gen_ai.agent.resumed_from.type": "checkpoint",
+          "gen_ai.agent.resumed_from.id": "01a182ab-3454-75df-952f-0d17e3c23ee8:3"
+        }
+      }
+    ]
+  },
+  {
+    "scenario": "worker-restart",
+    "workflow_id": "expense-worker-restart",
+    "run_id": "01a182ab-346a-71f0-8cbc-e56453d5e498",
+    "result": "submitted 250",
+    "history": [
+      "1:EVENT_TYPE_WORKFLOW_EXECUTION_STARTED",
+      "2:EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "3:EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "4:EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "5:EVENT_TYPE_WORKFLOW_EXECUTION_SIGNALED",
+      "6:EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "7:EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "8:EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "9:EVENT_TYPE_ACTIVITY_TASK_SCHEDULED",
+      "10:EVENT_TYPE_ACTIVITY_TASK_STARTED",
+      "11:EVENT_TYPE_ACTIVITY_TASK_COMPLETED",
+      "12:EVENT_TYPE_WORKFLOW_TASK_SCHEDULED",
+      "13:EVENT_TYPE_WORKFLOW_TASK_STARTED",
+      "14:EVENT_TYPE_WORKFLOW_TASK_COMPLETED",
+      "15:EVENT_TYPE_WORKFLOW_EXECUTION_COMPLETED"
+    ],
+    "spans": [
+      {
+        "name": "request expense",
+        "trace_id": "8409114ee935979cc64e89ae29b0a0b3",
+        "span_id": "8d8891ef76765db6",
+        "parent_span_id": null
+      },
+      {
+        "name": "approve expense",
+        "trace_id": "a069d1ed41d83fc676e7beb5be95d749",
+        "span_id": "11c2cede99879030",
+        "parent_span_id": null
+      }
+    ],
+    "logs": [
+      {
+        "event_name": "gen_ai.agent.paused",
+        "trace_id": "8409114ee935979cc64e89ae29b0a0b3",
+        "span_id": "8d8891ef76765db6",
+        "attributes": {
+          "gen_ai.agent.execution.id": "01a182ab-346a-71f0-8cbc-e56453d5e498",
+          "gen_ai.agent.name": "ExpenseApproval",
+          "gen_ai.agent.pause.id": "7bebca7e-2c77-4f01-b6c1-79288aa57497",
+          "gen_ai.agent.pause.reason": "human_input"
+        }
+      },
+      {
+        "event_name": "gen_ai.agent.checkpointed",
+        "trace_id": "8409114ee935979cc64e89ae29b0a0b3",
+        "span_id": "8d8891ef76765db6",
+        "attributes": {
+          "gen_ai.agent.execution.id": "01a182ab-346a-71f0-8cbc-e56453d5e498",
+          "gen_ai.agent.name": "ExpenseApproval",
+          "gen_ai.agent.checkpoint.id": "01a182ab-346a-71f0-8cbc-e56453d5e498:3",
+          "gen_ai.agent.pause.id": "7bebca7e-2c77-4f01-b6c1-79288aa57497"
+        }
+      },
+      {
+        "event_name": "gen_ai.agent.resumed",
+        "trace_id": "8409114ee935979cc64e89ae29b0a0b3",
+        "span_id": "8d8891ef76765db6",
+        "attributes": {
+          "gen_ai.agent.execution.id": "01a182ab-346a-71f0-8cbc-e56453d5e498",
+          "gen_ai.agent.name": "ExpenseApproval",
+          "gen_ai.agent.resumed_from.type": "checkpoint",
+          "gen_ai.agent.resumed_from.id": "01a182ab-346a-71f0-8cbc-e56453d5e498:3"
+        }
+      }
+    ]
+  }
+]
